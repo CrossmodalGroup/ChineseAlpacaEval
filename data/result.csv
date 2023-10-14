@@ -1,0 +1,22 @@
+Model Name,Win Rate(%),Length
+gpt-4-0613,91.19,308
+chatglm_pro,90.57,430
+gpt-3.5-turbo-0613,89.43,307
+ernie_bot,88.81,454
+Baichuan-13B-chat,85.28,449
+Baichuan2-13B-chat,85.16,450
+spark,82.89,327
+Xwin-LM,82.14,466
+chinese-alpaca-2-13b,79.87,491
+Qwen-14B-Chat,76.23,295
+WizardLM,75.6,411
+ChatGLM2-6B,74.34,421
+Qwen-7B-Chat,69.69,275
+ChatGLM-6B,68.18,401
+qwen_turbo,65.66,248
+firefly-llama2-13b-chat,52.2,261
+BELLE-2,51.45,199
+text-davinci-003,50.0,150
+Vicuna-13B,41.89,249
+Vicuna-7B,30.31,308
+LLaMA2-13b-chat,9.06,1309
