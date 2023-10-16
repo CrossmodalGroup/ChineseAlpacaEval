@@ -1,10 +1,10 @@
 # ChineseAlpacaEval
 
-得益于建模语言分布能力的进一步提升，LLMs不仅可以解决广泛的传统NLP任务，更能够针对自然语言指令生成符合人类偏好的响应。然而，模型在传统NLP基准上较高的得分并不能说明它拥有较高的用户偏好，这是因为这些基准局限在有限的一组任务上。因此，研究者陆续发布了[Vicuna](https://lmsys.org/blog/2023-03-30-vicuna/)、[MT Bench](https://huggingface.co/spaces/lmsys/mt-bench)、[AlpacaEval](https://github.com/tatsu-lab/alpaca_eval#use-cases)等自动化评估来测试LLMs的指令跟随能力。但是这些基准均主要针对英语，对汉语等其它语言测试不足。
+得益于建模语言分布能力的进一步提升，LLMs不仅可以解决广泛的传统NLP任务，更能够针对自然语言指令生成符合人类偏好的响应。然而，模型在传统NLP基准上较高的得分并不能说明它拥有较高的用户偏好，这是因为这些基准局限在有限的一组任务上。因此，研究者陆续发布了[Vicuna](https://lmsys.org/blog/2023-03-30-vicuna/)、[MT Bench](https://huggingface.co/spaces/lmsys/mt-bench)、[AlpacaEval](https://github.com/tatsu-lab/alpaca_eval#use-cases)等自动化评估来测试LLMs与用户偏好对齐的能力。但是这些基准均主要针对英语，对汉语等其它语言测试不足。
 
 当前涌现出了许多中文大模型的评估基准，例如[C-Eval](https://cevalbenchmark.com/)、[CMMLU](https://github.com/haonan-li/CMMLU)、[GAOKAO-Bench](https://github.com/OpenLMLab/GAOKAO-Bench)等等。不过这些基准大多使用多项选择的形式测试模型的中文知识，或是集成各类传统中文NLP任务。而对于LLMs能否遵循中文用户的指令，生成符合中文用户偏好的响应，是缺乏评估的。
 
-因此，我们提出了中文指令跟随能力评估基准ChineseAlpacaEval，它基于被广泛认可的AlpacaEval评估基准，利用GPT-4等大模型进行自动化的评测。我们将AlpacaEval的测试指令集经过翻译、中文背景替换、人工校正三步转换成中文，使指令在具有较高流利度的前提下具有中文知识背景。我们将目标模型与text-davinci-003在ChineseAlpacaEval指令集上的回复进行比较，计算获胜率，作为其基准得分。
+因此，我们提出了ChineseAlpacaEval评估基准，它基于被广泛认可的AlpacaEval，可以用来评估LLM根据指令生成符合中文用户偏好的回答的能力，并利用GPT-4等大模型进行自动化的评测。我们将AlpacaEval的测试指令集经过翻译、中文背景替换、人工校正三步转换成中文，使指令在具有较高流利度的前提下具有中文知识背景。我们将目标模型与text-davinci-003在ChineseAlpacaEval指令集上的回复进行比较，计算获胜率，作为其基准得分。
 
 ## Quick Start
 
@@ -92,11 +92,11 @@ python evaluate.py --model_name='<model_name>' \
 | Qwen-14B-Chat              | 76.23       | 23.52        | 0.25     |
 | WizardLM-13B-V1.2          | 75.6        | 24.4         | 0        |
 | ChatGLM2-6B                | 74.34       | 25.66        | 0        |
+| BELLE-Llama2-13B-chat-0.4M | 70.82       | 29.18        | 0        |
 | Qwen-7B-Chat               | 69.69       | 30.31        | 0        |
 | ChatGLM-6B                 | 68.18       | 31.82        | 0        |
 | Qwen_turbo                 | 65.66       | 34.34        | 0        |
 | Firefly-llama2-13b-chat    | 52.2        | 47.8         | 0        |
-| BELLE-Llama2-13B-chat-0.4M | 51.45       | 48.55        | 0        |
 | text-davinci-003           | 50.0        | 50.0         | 0        |
 | Vicuna-13B                 | 41.89       | 58.11        | 0        |
 | Vicuna-7B                  | 30.31       | 69.69        | 0        |
