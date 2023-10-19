@@ -6,7 +6,7 @@
 
 因此，我们提出了ChineseAlpacaEval评估基准，它基于被广泛认可的AlpacaEval，可以用来评估LLM根据指令生成符合中文用户偏好的回答的能力，并利用GPT-4等大模型进行自动化的评测。我们将AlpacaEval的测试指令集经过翻译、中文背景替换、人工校正三步转换成中文，使指令在具有较高流利度的前提下具有中文知识背景。我们将目标模型与text-davinci-003在ChineseAlpacaEval指令集上的回复进行比较，计算获胜率，作为其基准得分。
 
-ChineseAlpacaEval项目的技术报告见 `ChineseAlpacaEval.pdf`。
+ChineseAlpacaEval项目的技术报告见 `**ChineseAlpacaEval.pdf**`。
 
 ## Quick Start
 
