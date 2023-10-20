@@ -10,9 +10,6 @@ from tqdm import tqdm
 import numpy as np
 
 
-os.environ["http_proxy"] = "http://127.0.0.1:47890"
-os.environ["https_proxy"] = "http://127.0.0.1:47890"
-
 tiktoken_encoding = tiktoken.get_encoding("cl100k_base")
 SYSTEM_CONTENT = '''You are a helpful assistant that ranks models according to the quality of their Chinese answers.'''
 
